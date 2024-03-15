@@ -15,14 +15,14 @@ This repository requires the following Python libraries to run:
 
 # Playing the Game
 
-1. Click on [Manage_Teams] > [NEW_Team]. A full list of players to choose from will appear.
+1. Click on `Manage Teams` > `NEW Team`. A full list of players to choose from will appear.
 
 2. Select Players to be added to the team by double-clicking on the Players' name. The player will shift over to the other column.
 
-3. Once assembled, name the team in the [Team_Name] window and Click on [Set].
+3. Once assembled, name the team in the `Team Name` window and Click on `Set`.
 
-4. Go to [Manage_Teams] > [EVALTUATE_Team] to open the scoring window.
+4. Go to `Manage Teams` -> `EVALTUATE Team` to open the scoring window.
 
 5. Choose the created team in the left-hand drop-down menu, and choose the match to get score for in the right-hand menu.
 
-6. Click on [Evaulute_Score] to get a full evaluation in the right column.
+6. Click on `Evaulute Score` to get a full evaluation in the right column.
