@@ -6,7 +6,7 @@ cur = library.cursor()
 
 
 def evaluate(i):
-    cur.execute("SELECT * FROM stats WHERE Player = '" + i + "';")
+    cur.execute("SELECT * FROM stats WHERE Player = ?", (i,))
     data = cur.fetchall()
     print(data)
     for row in data:
@@ -18,7 +18,7 @@ def evaluate(i):
         value = (row[5])
         ctg = (row[6])
 
-    cur.execute("SELECT * FROM match WHERE Player = '" + i + "';")
+    cur.execute("SELECT * FROM match WHERE Player = ?", (i,))
     data2 = cur.fetchall()
     print(data2)
     for row in data2:
@@ -51,7 +51,7 @@ def bat(scored, faced, fifties, hundreds, fours, sixes):
     pts = 0
 
     pts = pts + (scored / 2)
-    strike_rate = (scored / faced) * 100
+    strike_rate = (scored / faced) * 100 if faced != 0 else 0
 
     pts = pts + (fifties * 5)
     pts = pts + (hundreds * 10)
@@ -75,7 +75,7 @@ def bowl(wkts, bowled, given):
     pts = pts + (wkts * 10)
     overs = int(bowled/ 6)
     try:
-        economy = (given / overs)
+        economy = (given / overs) if overs != 0 else 0
     except:
         economy = 0
 
